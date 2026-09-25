@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/21 11:24:41 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/22 14:36:51 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/25 13:31:36 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,6 +16,7 @@
 # include <iostream>
 # include <algorithm>
 # include <vector>
+# include <stdexcept>
 
 template< typename T >
 typename T::iterator	easyfind( T& container, const int& find_int ) {
