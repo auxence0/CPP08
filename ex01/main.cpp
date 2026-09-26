@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 15:00:35 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/22 15:03:41 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/25 14:20:45 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,8 +21,47 @@ int	main() {
 	sp.addNumber(9);
 	sp.addNumber(11);
 
-	std::cout << sp.shortestSpan() << std::endl;
-	std::cout << sp.longestSpan() << std::endl;
+	try {
+		std::cout << sp.shortestSpan() << std::endl;
+	}
+	catch ( const std::exception& e) {
+		std::cerr << e.what() << "\n";
+	}
+	try {
+		std::cout << sp.longestSpan() << std::endl;
+	}
+	catch ( const std::exception& e ) {
+		std::cerr << e.what() << "\n";
+	}
+	
+	Span	empty;
+	try {
+		std::cout << empty.shortestSpan() << "\n";
+	}
+	catch ( const std::exception& e ) {
+		std::cerr << e.what() << "\n";
+	}
 
+	Span	Mucho(1000);
+	srand(time(NULL));
+	try {
+		for ( int i = 0; i < 1000; ++i )
+			Mucho.addNumber(rand());
+	}
+	catch ( const std::exception& e ) {
+		std::cerr << e.what() << "\n";
+	}
+	try {
+		std::cout << Mucho.longestSpan() << "\n";
+	}
+	catch ( const std::exception& e ) {
+		std::cerr << e.what() << "\n";
+	}
+	try {
+		Mucho.addNumber(rand());
+	}
+	catch ( const std::exception& e ) {
+		std::cerr << e.what() << "\n";
+	}
 	return 0;
 }

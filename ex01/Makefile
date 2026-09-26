@@ -6,7 +6,7 @@
 #    By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+         #
 #                                                 +#+#+#+#+#+   +#+            #
 #    Created: 2026/07/22 11:52:07 by asauvage          #+#    #+#              #
-#    Updated: 2026/09/22 14:54:36 by asauvage         ###   ########.fr        #
+#    Updated: 2026/09/25 13:59:05 by asauvage         ###   ########.fr        #
 #                                                                              #
 # **************************************************************************** #
 
@@ -17,7 +17,7 @@ CXXFLAGS = -Wall -Wextra -Werror -std=c++98 -g
 NAME = EsasyFind
 
 SRCS = main.cpp \
-	   Scan.cpp
+	   Span.cpp
 
 OBJS := $(SRCS:.cpp=.o)
 

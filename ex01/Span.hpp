@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 14:55:08 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/23 10:39:30 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/25 13:57:34 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,8 @@
 
 # include <iostream>
 # include <vector>
+# include <algorithm>
+# include <stdexcept>
 
 class	Span {
 	public:
@@ -23,11 +25,11 @@ class	Span {
 		Span( const Span& obj );
 		Span&	operator=( const Span& rhs);
 		~Span();
-		void	addNumber( unsigned int N );
-		unsigned int	shortestSpan();
-		unsigned int	longestSpan();
+		void	addNumber( int N );
+		int	shortestSpan();
+		int	longestSpan();
 	private:
-		std::vector<int>	vect;
+		std::vector<int>	vect_;
 };
 
 #endif
