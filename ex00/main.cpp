@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 14:23:17 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/22 14:42:54 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/29 10:41:59 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -37,4 +37,22 @@ int	main() {
 	if (*find == 10)
 		std::cout << "Iterator has been successfully shifted\n";
 
+	int arr[] = {10, 20, 30, 40, 50};
+	size_t size = sizeof(arr) / sizeof(arr[0]);
+
+	const std::vector<int> v(arr, arr + size);
+	try{
+		easyfind(v, 10);
+		std::cout << "number 10 was found\n";
+	}
+	catch (const std::exception& e) {
+		std::cerr << e.what() << "\n";
+	}
+	try{
+		easyfind(v, 121);
+		std::cout << "number 10 at index: " << find - v.begin() << "\n";
+	}
+	catch (const std::exception& e) {
+		std::cerr << e.what() << "\n";
+	}
 }
