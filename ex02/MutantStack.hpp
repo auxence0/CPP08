@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/26 15:21:37 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/28 14:17:10 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/29 11:11:29 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,6 +15,7 @@
 
 # include <iostream>
 # include <stack>
+# include <list>
 
 template< typename T >
 class	MutantStack: public std::stack<T> {
