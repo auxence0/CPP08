@@ -6,7 +6,7 @@
 /*   By: asauvage <asauvage@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2026/09/22 15:08:45 by asauvage          #+#    #+#             */
-/*   Updated: 2026/09/25 14:19:10 by asauvage         ###   ########.fr       */
+/*   Updated: 2026/09/30 11:43:02 by asauvage         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -41,7 +41,7 @@ void	Span::addNumber( int N ) {
 }
 
 int	Span::shortestSpan() {
-	if (vect_.capacity() < 2)
+	if (vect_.size() < 2)
 		throw	std::runtime_error("There are fewer than 2 numbers");
 
 	std::sort(vect_.begin(), vect_.end());
@@ -55,7 +55,7 @@ int	Span::shortestSpan() {
 }
 
 int	Span::longestSpan() {
-	if (vect_.capacity() < 2)
+	if (vect_.size() < 2)
 		throw	std::runtime_error("There are fewer than 2 numbers");
 
 	int	nb;
